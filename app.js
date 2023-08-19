@@ -10,12 +10,18 @@ app.set('view engine','ejs');
 
 /************DB-connect*************/
 
-mongoose.connect('mongodb+srv://goswamidiptanshu:test123@cluster0.3c0tt2w.mongodb.net/todolistDB')
+mongoose.connect(URI_KEY)
+/***********For-Local-Environment-use-this***********/
+// npm i dotenv
+// require('dotenv').config()
+// mongoose.connect(process.env.URI_KEY)
+// add URI in ".envsample" and rename it to ".env"
 .then(function(){
     console.log("Connected Successfully to DataBase");
 }).catch(function(err){
     console.log(err);
 })
+
 
 /************DB-Data-init*************/
 const listschema = mongoose.Schema({

@@ -143,6 +143,10 @@ footer {
 /************************Media-Resolutions**************************/
 @media(min-width : 150px) and (max-width :900px){
 
+    p{
+      font-weight: 500;
+    }
+
     #heading{
       margin-top: 20%;
     }
@@ -177,6 +181,7 @@ footer {
     input[type="text"]{
       width: 80%;
       margin: 0;
+      font-weight: 400;
     }
 
     form.item{
