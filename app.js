@@ -1,13 +1,13 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
-const mongoose = require('mongoose');
+require('dotenv').config()
 
 const app = express();
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static("public"));
 app.set('view engine','ejs');
-require('dotenv').config()
 
 /************DB-connect*************/
 
@@ -17,7 +17,6 @@ mongoose.connect(process.env.URI_KEY)
 }).catch(function(err){
     console.log(err);
 })
-
 
 /************DB-Data-init*************/
 const listschema = mongoose.Schema({
