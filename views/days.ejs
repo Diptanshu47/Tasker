@@ -1,0 +1,43 @@
+<%-include('header.ejs');-%>
+<body>
+
+	<div class="box" id="heading">
+		<h1><%=title%>!</h1>
+	</div>
+
+	<div class="box">
+		<% items.forEach(function(item){ %>
+		<form action="/del" method="post" >
+			<div class="item">
+				<input type="checkbox" name="del" value="<%= item._id%>" onchange="this.form.submit()"/>
+				<p><%= item.name %></p>
+			</div>
+			<input type="hidden" name="pagedel" value="<%= title %>"></input>
+		</form>
+		<% }); %>
+
+		<form class="item" action="/" method="post">
+			<input type="text" name="todo" placeholder="Add new item" />
+			<button type="submit" name="button" value="<%=title%>">+</button>
+		</form>
+	</div>
+
+	<div class="deldiv">
+		<form action="/listdelete" method="post" >
+			<button class="delbutton" type="submit" name="listpage" value="<%=title%>"><img class="delimg" src="bin.png"></button>
+		</form>
+		<p class="deldel">Delete List</p>
+	</div>
+
+	<div class="instruct">
+		<p class="instruction">To Create a New List - tasker.com"/Newlistname"</p>
+		<p class="listings">Existing Lists :
+			<% listslist.forEach(function(page){ %>
+				<a class="links" href="/<%= page %>"> <%= page %> , </a>
+			<% }); %>	
+			<a class="links" href="/"> HomeList .</a>
+		</p>
+	</div>
+
+</body>
+<%-include('footer.ejs');-%>

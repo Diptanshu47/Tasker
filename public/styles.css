@@ -1,0 +1,185 @@
+html {
+  background-color: #DAC0A3;
+  font-family: 'helvetica neue';
+}
+
+h1 {
+  color: #F8F0E5;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #EADBC8;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin-bottom: 25px;
+}
+
+#heading {
+  background-color: #102C57;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #102C57;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #102C57;
+}
+
+form.item{
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #102C57;
+  color: #F8F0E5;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #102C57;
+}
+
+::placeholder {
+  color: #102C57;
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+}
+
+.instruct{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.instruct p{
+  font-size: 18px;
+  padding: 2.5px;
+}
+
+.links{
+  text-decoration: none;
+  color:#102C57;
+}
+
+.listings a{
+  font-weight: 900;
+}
+
+.deldiv{
+  width: 100px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.delimg{
+  width: 30px;
+  height: 30px;
+  background-color: #DAC0A3;
+}
+
+.delbutton{
+  width: auto;
+  background-color: #DAC0A3;
+  display: grid;
+  align-items: center;
+  margin: auto;
+}
+
+.deldel{
+  text-align: center;
+  font-size: 15px;
+  padding: 0;
+}
+
+/************************Media-Resolutions**************************/
+@media(min-width : 150px) and (max-width :900px){
+
+    #heading{
+      margin-top: 20%;
+    }
+
+    .box{
+      width: 85%;
+      margin-top: 25px;
+    }
+
+    .box h1{
+      font-size: 1.5rem;
+    }
+
+    .item input{
+      margin: 15px;
+    }
+
+    .item p{
+      padding: 10px;
+    }
+
+    .listings{
+      width: 40%;
+      margin: auto;
+      margin: 15px auto;
+    }
+
+    .instruct{
+      width: 80%;
+    }
+
+    input[type="text"]{
+      width: 80%;
+      margin: 0;
+    }
+
+    form.item{
+      margin-left: 5%;
+    }
+}
