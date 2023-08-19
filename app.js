@@ -7,15 +7,11 @@ const app = express();
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static("public"));
 app.set('view engine','ejs');
+require('dotenv').config()
 
 /************DB-connect*************/
 
-mongoose.connect(URI_KEY)
-/***********For-Local-Environment-use-this***********/
-// npm i dotenv
-// require('dotenv').config()
-// mongoose.connect(process.env.URI_KEY)
-// add URI in ".envsample" and rename it to ".env"
+mongoose.connect(process.env.URI_KEY)
 .then(function(){
     console.log("Connected Successfully to DataBase");
 }).catch(function(err){
