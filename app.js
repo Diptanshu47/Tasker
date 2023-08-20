@@ -11,7 +11,7 @@ app.set('view engine','ejs');
 
 /************DB-connect*************/
 
-mongoose.connect(process.env.URI_KEY)
+mongoose.connect('mongodb+srv://'+process.env.URI_KEY)
 .then(function(){
     console.log("Connected Successfully to DataBase");
 }).catch(function(err){
